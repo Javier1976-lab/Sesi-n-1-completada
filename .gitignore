@@ -1,0 +1,27 @@
+# Power BI Desktop
+*.pbix
+*.pbit
+*.pbids
+
+# Credenciales y configuración local
+.env
+.env.*
+!.env.example
+*.secrets.json
+credentials.json
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak
+~$*
+Thumbs.db
+.DS_Store
+
+# Herramientas y editores
+.vscode/
+.idea/
+
+# Salidas locales
+output/
+exports/
