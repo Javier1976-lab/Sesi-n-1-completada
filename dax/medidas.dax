@@ -1,0 +1,28 @@
+-- Medidas de ejemplo. Sustituye 'Ventas' y sus columnas por los nombres reales del modelo.
+
+Ventas totales =
+SUM ( Ventas[Importe] )
+
+Unidades vendidas =
+SUM ( Ventas[Unidades] )
+
+Precio medio =
+DIVIDE ( [Ventas totales], [Unidades vendidas] )
+
+Ventas año anterior =
+CALCULATE (
+    [Ventas totales],
+    SAMEPERIODLASTYEAR ( DimFecha[Fecha] )
+)
+
+Variación interanual =
+[Ventas totales] - [Ventas año anterior]
+
+Variación interanual % =
+DIVIDE ( [Variación interanual], [Ventas año anterior] )
+
+Ventas acumuladas año =
+TOTALYTD (
+    [Ventas totales],
+    DimFecha[Fecha]
+)
